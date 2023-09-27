@@ -1,17 +1,17 @@
 def parentesis_balanceados(texto):
-
-    apertura = 0
-
+    """Indica si la cantidad de parentesis esta balanceada o no.
+    Argumentos:
+    texto -- Debe contener parentesis
+    return Valor booleano True/ False correspondientemente."""        
+    balance = 0
     for parentesis in texto:
         if parentesis == "(":
-            apertura += 1
+            balance += 1
         elif parentesis == ")":
-            apertura -= 1
-
-            if apertura < 0:
+            balance -= 1
+            if balance < 0:
                 return False
-
-    return apertura == 0
+    return balance == 0
 
 
 print(parentesis_balanceados("((()))()"))

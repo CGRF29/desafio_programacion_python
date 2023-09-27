@@ -2,7 +2,13 @@ import re
 
 
 def slugify(texto):
-
+    """
+    Regresa el texto unicamente con caracteres alfanumericos,
+    separando las palabras con guion(-).
+    Argumentos:
+    texto -- Debe ser un string
+    slug  -- return cadena modificada
+    """
     slug = (texto
         .lower()
         .strip()
