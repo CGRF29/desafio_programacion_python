@@ -1,5 +1,9 @@
 def primera_letra_repetida(texto):
-
+    """Regresa la primera letra repetida en un texto.
+    Argumentos:
+    texto -- Debe ser string
+    letra -- Debe ser string
+    """
     texto_minsucula = texto.lower()
     texto_sin_espacios = texto_minsucula.replace(" ", "")
     lista_letras = []
@@ -13,5 +17,5 @@ def primera_letra_repetida(texto):
 
 
 
-print(primera_letra_repetida("saltar"))  # a
-print(primera_letra_repetida("me gusta"))   # None
+print(primera_letra_repetida("hola"))  # None
+print(primera_letra_repetida("hola mundo"))   # o
