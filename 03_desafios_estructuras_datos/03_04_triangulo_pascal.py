@@ -9,21 +9,24 @@
 
 
 def triangulo_pascal(cantidad_filas):
-
+    """
+    Regresa el triangulo de Pascal.
+    Argumentos:
+    cantidad_filas -- #filas, debe ser entero 
+    triangulo -- debe contener las filas correspondientes al triangulo de Pascal
+    """
     triangulo = []
 
     for n_fila in range(cantidad_filas):
-
         fila = []
-
         for posicion in range(n_fila+1):
-
             if posicion == 0 or posicion == n_fila:
                 fila.append(1)
             else:
                 valor = triangulo[n_fila-1][posicion-1] + triangulo[n_fila-1][posicion]
+                #print(valor)
                 fila.append(valor)
-
+                #print(fila)
         triangulo.append(fila)
     return triangulo
 
